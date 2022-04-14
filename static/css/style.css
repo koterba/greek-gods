@@ -1,0 +1,83 @@
+ /* For best practice, move CSS below to an external CSS file. */
+@keyframes fadeinall {
+0% {
+  opacity: 1; }
+97% {
+  opacity: 0; }
+98% {
+  opacity: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0); }
+99% {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%); }
+100% {
+  opacity: 0;
+  z-index: -1; } }
+#loader {
+  opacity: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  background-color: #fff;
+  z-index: 999;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation: fadeinall 1s normal both;
+  animation: fadeinall 1s normal both;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+
+
+body {
+  margin-top: 17%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  max-width: 70%;
+  margin:  auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+button {
+  margin-top: 5%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+}
+
+a {
+  overflow: hidden;
+}
+
+a::after {
+  opacity 1;
+  transform: translate3d(-100%, 0, 0);
+}
+
+a:hover::after,
+a:focus::after{
+  transform: translate3d(0, 0, 0);
+}
